@@ -39,7 +39,7 @@ nav ul {
 nav ul:first-child li {
     justify-content: center;
     align-items: center;
-    width: 65%;
+    width: 60%;
 }
 
 .logo {
@@ -88,7 +88,6 @@ nav a {
 
 .dropdown img {
     width: 50px;
-    pointer-events: none;
 }
 
 main {

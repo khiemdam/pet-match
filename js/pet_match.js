@@ -4,7 +4,8 @@ $(document).ready(function() {
     $('.dropdown-button').on('click', function() {
         // JQuery handles animations for me!
         $('.dropdown-content').slideToggle("slow");
-        console.log("clicked on dropdown button")
+        $('.dropdown-content a').css("color", "#FF8FAB");
+        console.log("clicked on dropdown button");
     });
     // animate buttons
     $('.dropdown-button, .yes-button, .no-button').hover(function() {

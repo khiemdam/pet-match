@@ -11,7 +11,7 @@
 
 h1 {
     font-size: 40px;
-    padding: 30px 30px 50px 30px;
+    padding: 150px 30px 50px 30px;
 }
 
 h2 {
@@ -28,7 +28,7 @@ nav ul {
     margin: 0;
     padding: 40px;
     display: flex;
-    position: relative;
+    position: fixed;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -74,6 +74,7 @@ nav a {
 
 .dropdown-content li:first-child a {
     border-top: 1px solid #d8d8d8;
+    z-index: 1;
 }
   
 .dropdown-content a {
@@ -133,7 +134,7 @@ main {
 }
 
 .end-info {
-    padding: 180px 20px;
+    padding: 40px 20px;
     text-align: center;
     text-wrap: wrap;
 }

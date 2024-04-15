@@ -26,7 +26,7 @@ $(document).ready(function() {
     });
     $('.pet-card').on("swiperight", function() {
         ++curr_pet_index;
-        left_swipe(pets, curr_pet_index);
+        right_swipe(pets, curr_pet_index);
     });
     // handle button clicks
     $('.no-button').on("click", function() {
@@ -35,7 +35,7 @@ $(document).ready(function() {
     });
     $('.yes-button').on("click", function() {
         ++curr_pet_index;
-        left_swipe(pets, curr_pet_index);
+        right_swipe(pets, curr_pet_index);
     });
 })
 
@@ -78,6 +78,30 @@ function left_swipe(pets, curr_pet_index) {
             $('.pet-card').addClass("teleport-in");
             $('.pet-card').on('transitionend', function() {
                 $('.pet-card').removeClass('slide-left');
+                if (curr_pet_index < pets.length) {
+                    load_next_pet(pets, curr_pet_index);
+                }
+                else {
+                    console.log(curr_pet_index);
+                    end_card();
+                }
+                $('.pet-card').removeClass('teleport-in');
+                $('.pet-card').addClass('fade-in');
+                $('.pet-card').on('transitionend', function() {
+                    $('.pet-card').removeClass('fade-in');
+                })
+            })
+        });
+    }
+}
+
+function right_swipe(pets, curr_pet_index) {
+    if (curr_pet_index <= pets.length) {
+        $('.pet-card').addClass("slide-right");
+        $('.pet-card').on('transitionend', function() {
+            $('.pet-card').addClass("teleport-in");
+            $('.pet-card').on('transitionend', function() {
+                $('.pet-card').removeClass('slide-right');
                 if (curr_pet_index < pets.length) {
                     load_next_pet(pets, curr_pet_index);
                 }

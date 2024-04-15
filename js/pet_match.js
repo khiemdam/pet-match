@@ -72,25 +72,27 @@ function load_first_pet(pets_array) {
 }
 
 function left_swipe(pets, curr_pet_index) {
-    $('.pet-card').addClass("slide-left");
-    $('.pet-card').on('transitionend', function() {
-        $('.pet-card').addClass("teleport-in");
+    if (curr_pet_index <= pets.length) {
+        $('.pet-card').addClass("slide-left");
         $('.pet-card').on('transitionend', function() {
-            $('.pet-card').removeClass('slide-left');
-            if (curr_pet_index < pets.length) {
-                load_next_pet(pets, curr_pet_index);
-            }
-            else {
-                console.log(curr_pet_index);
-                end_card();
-            }
-            $('.pet-card').removeClass('teleport-in');
-            $('.pet-card').addClass('fade-in');
+            $('.pet-card').addClass("teleport-in");
             $('.pet-card').on('transitionend', function() {
-                $('.pet-card').removeClass('fade-in');
+                $('.pet-card').removeClass('slide-left');
+                if (curr_pet_index < pets.length) {
+                    load_next_pet(pets, curr_pet_index);
+                }
+                else {
+                    console.log(curr_pet_index);
+                    end_card();
+                }
+                $('.pet-card').removeClass('teleport-in');
+                $('.pet-card').addClass('fade-in');
+                $('.pet-card').on('transitionend', function() {
+                    $('.pet-card').removeClass('fade-in');
+                })
             })
-        })
-    });
+        });
+    }
 }
 
 function load_next_pet(pets_array, curr_pet_index) {

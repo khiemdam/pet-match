@@ -155,6 +155,8 @@ main {
     display: flex;
     justify-content: space-evenly;
     width: 80%;
+    position: absolute;
+    bottom: 3%;
 }
 
 .yes-button, .no-button {
@@ -163,14 +165,14 @@ main {
 }
 
 .slide-left {
-    transform: translate(-500px, 0px);
+    transform: translate(-400px, 0px);
     opacity: 0;
-    transition: all 0.5s; 
+    transition: all 0.4s; 
 }
 
 .teleport-back {
     opacity: 0;
-    transition: all 2s linear ease-out;
+    transition: all 0s linear ease-out;
 }
 
 .fade-in {

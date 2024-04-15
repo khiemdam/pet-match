@@ -104,7 +104,6 @@ function load_next_pet(pets_array, curr_pet_index) {
         <div class="pet-info">
             <h2>${pet.name}, ${pet.age}</h2>
             <p>${pet.info}</p>
-            <p>${curr_pet_index}</p>
         </div>`;
     $('.pet-card').html(pet_html);
 }

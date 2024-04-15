@@ -88,11 +88,12 @@ nav a {
 
 .dropdown img {
     width: 50px;
+    pointer-events: none;
 }
 
 main {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
 }
@@ -115,18 +116,30 @@ main {
     background-color: rgb(243, 242, 242);
 }
 
-.pet_card {
+.pet-card {
     border-radius: 5%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    max-width: 400px;
+    touch-action: none;
 }
 
-.pet_card img {
+.pet-card img {
     width: 400px;
     border-radius: 5% 5% 0% 0%;
 }
 
 .pet-info {
     padding: 10px 20px 20px 20px;
+}
+
+.end-info {
+    padding: 180px 20px;
+    text-align: center;
+    text-wrap: wrap;
+}
+
+.end-info h2 {
+    padding-bottom: 20px;
 }
 
 .buttons {
@@ -142,3 +155,18 @@ main {
     width: 80px; /* Optional: Set width based on button content */
 }
 
+.slide-left {
+    transform: translate(-500px, 0px);
+    opacity: 0;
+    transition: all 0.5s; 
+}
+
+.teleport-back {
+    opacity: 0;
+    transition: all 2s linear ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s;
+}

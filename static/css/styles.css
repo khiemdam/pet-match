@@ -199,7 +199,6 @@ main {
         justify-content: center;
         align-items: center;
         width: 30%;
-        padding-top: 7%;
     }
     .pet-card {
         display: flex;

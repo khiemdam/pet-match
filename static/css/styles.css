@@ -9,9 +9,13 @@
     }
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 h1 {
     font-size: 40px;
-    padding: 30px 30px 50px 30px;
+    padding: 30px;
 }
 
 h2 {
@@ -21,6 +25,11 @@ h2 {
 
 p {
     font-size: 20px;
+}
+
+a {
+    border-radius: 20px;
+    padding: 5px;
 }
 
 nav ul {
@@ -34,6 +43,7 @@ nav ul {
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    background-color: white;
     z-index: 20;
 }
 
@@ -156,9 +166,18 @@ main {
     padding-bottom: 30px;
     display: flex;
     justify-content: space-evenly;
-    width: 80%;
+    width: 100%;
     position: absolute;
     bottom: 1%;
+}
+
+.buttons2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: absolute;
 }
 
 .yes-button, .no-button {
@@ -166,16 +185,35 @@ main {
     width: 80px; /* Optional: Set width based on button content */
 }
 
+.adopt, .continue {
+    text-decoration: none;
+}
+
+.pet-yes {
+    position: absolute; 
+    top: 60%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 70%;
+    background-color: white;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+    box-shadow: 0 2px 40px 0 rgba(0,0,0,.2);
+    display: none;
+}
+
 .slide-left {
-    transform: translate(-400px, 0px);
+    transform: translate(-200px, 0px) rotate(-30deg);
     opacity: 0;
-    transition: all 0.4s; 
+    transition: all 0.2s; 
 }
 
 .slide-right {
-    transform: translate(400px, 0px);
+    transform: translate(200px, 0px) rotate(30deg);
     opacity: 0;
-    transition: all 0.4s; 
+    transition: all 0.2s; 
 }
 
 .teleport-back {
@@ -223,6 +261,17 @@ main {
     .end-info {
         padding: 100px 30px;
     }
+    .slide-left {
+        transform: translate(-400px, 0px) rotate(-20deg);
+        opacity: 0;
+        transition: all 0.3s; 
+    }
+    
+    .slide-right {
+        transform: translate(400px, 0px) rotate(20deg);
+        opacity: 0;
+        transition: all 0.3s; 
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -236,5 +285,16 @@ main {
     }
     .end-info {
         padding: 150px 30px;
+    }
+    .slide-left {
+        transform: translate(-600px, 0px) rotate(-20deg);
+        opacity: 0;
+        transition: all 0.4s; 
+    }
+    
+    .slide-right {
+        transform: translate(600px, 0px) rotate(20deg);
+        opacity: 0;
+        transition: all 0.4s; 
     }
 }

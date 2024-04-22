@@ -41,6 +41,12 @@ $(document).ready(function() {
         $('.dropdown-content').slideToggle("slow");
         console.log("selected dropdown button");
     });
+    $('.logo img').on('click',function() {
+        if ($(".dropdown-content").is(":visible")) {
+            $('.dropdown-content').slideToggle("slow");
+        }
+        console.log("selected dropdown button");
+    });
 
     // animate buttons
     $('.logo img, .dropdown-button, .yes-button, .no-button').on("mouseenter", function() {

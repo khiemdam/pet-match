@@ -475,7 +475,7 @@ main {
         /* background-position: bottom; */
         background-repeat: no-repeat;
         background-size: 60%;
-        background-image: url("/static/images/home.png");
+        background-image: url("/static/images/home.png"), url("/static/images/home.jpg");
         background-position: 0% 60%;
         background-attachment: fixed;
         color: white;

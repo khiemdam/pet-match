@@ -111,13 +111,13 @@ main {
     padding-bottom: auto;
 }
 
-.skip-main {
+.skip-main, .skip-main2, .skip-main3, .skip-main4 {
     position: absolute;
     left: -100%;
     overflow: hidden;
 }
 
-.skip-main:focus {
+.skip-main:focus, .skip-main2:focus, .skip-main3:focus, .skip-main4:focus {
     position: static;
     width: auto;
     height: auto;

@@ -21,6 +21,15 @@ $(document).ready(function() {
     $(".skip-main").on("click", function () {
         $('#main').attr('tabIndex', -1).focus();
     });
+    $(".skip-main2").on("click", function () {
+        $('#main2').attr('tabIndex', -1).focus();
+    });
+    $(".skip-main3").on("click", function () {
+        $('#main3').attr('tabIndex', -1).focus();
+    });
+    $(".skip-main4").on("click", function () {
+        $('#main4').attr('tabIndex', -1).focus();
+    });
 
     // dropdown menu
     $('.dropdown-button').on('click', function() {
@@ -28,11 +37,9 @@ $(document).ready(function() {
         $('.dropdown-content').slideToggle("slow");
         console.log("clicked on dropdown button");
     });
-    $('.dropdown-button').on('keypress',function(key) {
-        if(key.which == 13) {
-            $('.dropdown-content').slideToggle("slow");
-            console.log("selected dropdown button");
-        }
+    $('.dropdown-content a').on('click',function() {
+        $('.dropdown-content').slideToggle("slow");
+        console.log("selected dropdown button");
     });
 
     // animate buttons

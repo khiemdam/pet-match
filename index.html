@@ -11,27 +11,109 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-    <a href="#main" class="skip-main">Skip to Main Content</a>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/" class="logo"><img src="static/images/logo.png" alt="Pet Match logo"></a></li>
-                <div class="dropdown" tabindex="0">
-                    <a><img src="static/images/dropdown.png" class="dropdown-button"></a>
+    <div data-role="page" id="home">
+        <a href="#main" class="skip-main">Skip to Main Content</a>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="logo"><img src="static/images/logo.png" alt="Pet Match logo"></a></li>
+                    <div class="dropdown" tabindex="0">
+                        <a><img src="static/images/dropdown.png" class="dropdown-button"></a>
+                    </div>
+                </ul>
+                <ul class="dropdown-content">
+                    <li><a href="#home" class="home">Home</a></li>
+                    <li><a href="#discover" class="discover">Discover</a></li>
+                    <li><a href="#about" class="about">About</a></li>
+                    <li><a href="#contact" class="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>Home</h1>
+        </header>
+        <main id="main">
+            deez
+        </main>
+    </div>
+    <div data-role="page" id="discover">
+        <a href="#main2" class="skip-main2">Skip to Main Content</a>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="logo"><img src="static/images/logo.png" alt="Pet Match logo"></a></li>
+                    <div class="dropdown" tabindex="0">
+                        <a><img src="static/images/dropdown.png" class="dropdown-button"></a>
+                    </div>
+                </ul>
+                <ul class="dropdown-content">
+                    <li><a href="#home" class="home">Home</a></li>
+                    <li><a href="discover.html" class="discover">Discover</a></li>
+                    <li><a href="#about" class="about">About</a></li>
+                    <li><a href="contact.html" class="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>Discover</h1>
+        </header>
+        <main id="main2">
+            <div class="pet-card"></div>
+            <div class="buttons">
+                <a><img class="no-button" alt="No button" src="static/images/no-button.png"></a>
+                <a><img class="yes-button" alt="Yes button" src="static/images/yes-button.png"></a>
+            </div>
+            <div class="pet-yes">
+                <div class="yes-text"></div>
+                <div class="buttons2">
+                    <a class="adopt">Adopt ❤️ </a>
+                    <a class="continue">Continue Search</a>
                 </div>
-            </ul>
-            <ul class="dropdown-content">
-                <li><a href="/" class="home">Home</a></li>
-                <li><a href="discover.html" class="discover">Discover</a></li>
-                <li><a href="about.html" class="about">About</a></li>
-                <li><a href="contact.html" class="contact">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>Home</h1>
-    </header>
-    <main id="main">
-        
-    </main>
+            </div>
+        </main>
+    </div>
+    <div data-role="page" id="about">
+        <a href="#main3" class="skip-main3">Skip to Main Content</a>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="logo"><img src="static/images/logo.png" alt="Pet Match logo"></a></li>
+                    <div class="dropdown" tabindex="0">
+                        <a><img src="static/images/dropdown.png" class="dropdown-button"></a>
+                    </div>
+                </ul>
+                <ul class="dropdown-content">
+                    <li><a href="#home" class="home">Home</a></li>
+                    <li><a href="#discover" class="discover">Discover</a></li>
+                    <li><a href="#about" class="about">About</a></li>
+                    <li><a href="#contact" class="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>About</h1>
+        </header>
+        <main id="main3">
+            deez
+        </main>
+    </div>
+    <div data-role="page" id="contact">
+        <a href="#main4" class="skip-main4">Skip to Main Content</a>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="logo"><img src="static/images/logo.png" alt="Pet Match logo"></a></li>
+                    <div class="dropdown" tabindex="0">
+                        <a><img src="static/images/dropdown.png" class="dropdown-button"></a>
+                    </div>
+                </ul>
+                <ul class="dropdown-content">
+                    <li><a href="#home" class="home">Home</a></li>
+                    <li><a href="#discover" class="discover">Discover</a></li>
+                    <li><a href="#about" class="about">About</a></li>
+                    <li><a href="#contact" class="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>Contact</h1>
+        </header>
+        <main id="main4">
+            deez
+        </main>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

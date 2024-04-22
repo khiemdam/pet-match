@@ -22,16 +22,31 @@
                     </div>
                 </ul>
                 <ul class="dropdown-content">
-                    <li><a href="#home" class="home">Home</a></li>
+                    <li><a href="#home" class="home active">Home</a></li>
                     <li><a href="#discover" class="discover">Discover</a></li>
                     <li><a href="#about" class="about">About</a></li>
                     <li><a href="#contact" class="contact">Contact</a></li>
                 </ul>
             </nav>
-            <h1>Home</h1>
         </header>
         <main id="main">
-            deez
+            <div class="home-block">
+                <div class="home-image"></div>
+                <div class="home-right">
+                    <div class="home-text">
+                        Find your cute companion with just a swipe.
+                        <a href="#discover" class="home-button">
+                            Discover Pets
+                        </a>
+                        <a href="#about" class="home-button">
+                            About Me
+                        </a>
+                        <a href="#contact" class="home-button">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
     <div data-role="page" id="discover">
@@ -46,9 +61,9 @@
                 </ul>
                 <ul class="dropdown-content">
                     <li><a href="#home" class="home">Home</a></li>
-                    <li><a href="discover.html" class="discover">Discover</a></li>
+                    <li><a href="#discover" class="discover active">Discover</a></li>
                     <li><a href="#about" class="about">About</a></li>
-                    <li><a href="contact.html" class="contact">Contact</a></li>
+                    <li><a href="#contact" class="contact">Contact</a></li>
                 </ul>
             </nav>
             <h1>Discover</h1>
@@ -81,14 +96,27 @@
                 <ul class="dropdown-content">
                     <li><a href="#home" class="home">Home</a></li>
                     <li><a href="#discover" class="discover">Discover</a></li>
-                    <li><a href="#about" class="about">About</a></li>
+                    <li><a href="#about" class="about active">About</a></li>
                     <li><a href="#contact" class="contact">Contact</a></li>
                 </ul>
             </nav>
             <h1>About</h1>
         </header>
         <main id="main3">
-            deez
+            <div class="page-item">
+                <div class="page-left">
+                    <img src="static/images/me.png" width="332" alt="A Picture of Khiem Dam" class="main-img">
+                </div>
+                <div class="page-right">
+                    <p class="info-paragraph">
+                        Hello, my name is Khiem Dam. I am a Junior at the University of Michigan, and I am studying Computer Science, excited to dive into my first software engineering internship. I am excited to pursue my dream of becoming a software engineer.
+                        My final project for SI 339 is called Pet Finder.
+                    </p>
+                    <p class="info-paragraph">
+                        Pet Finder is like Tinder, but for pet adoptions. My website utilizes JQuery Mobile provides event handling and animations in the navigation bar, buttons, and allows users to swipe left or right on a wide selection of pets. JQuery also supports logic to render dynamic HTML and functions that shuffle the order that pets are displayed. Pet Finder also allows users to be redirected to an adoption service (if they had swiped right on a pet and truly want to adopt). This project has taken me 15+ hours, so I hope you enjoy!
+                    </p>
+                </div>
+            </div>
         </main>
     </div>
     <div data-role="page" id="contact">
@@ -105,13 +133,28 @@
                     <li><a href="#home" class="home">Home</a></li>
                     <li><a href="#discover" class="discover">Discover</a></li>
                     <li><a href="#about" class="about">About</a></li>
-                    <li><a href="#contact" class="contact">Contact</a></li>
+                    <li><a href="#contact" class="contact active">Contact</a></li>
                 </ul>
             </nav>
             <h1>Contact</h1>
         </header>
         <main id="main4">
-            deez
+            <div class="link-block">
+                <div class="link-spacer"></div>
+                <div class="link-content">
+                    <a href="https://www.instagram.com/khiem.dam/" class="link-button">Instagram</a>
+                </div>
+                <div class="link-content">
+                    <a href="https://www.linkedin.com/in/khiemd/" class="link-button">LinkedIn</a>
+                </div>
+                <div class="link-content">
+                    <a href="https://github.com/khiemdam" class="link-button">Github</a>
+                </div>
+                <div class="link-content">
+                    <a href="mailto: khiem@umich.edu" class="link-button">Email: khiem@umich.edu</a>
+                </div>
+                <div class="link-spacer"></div>
+            </div>
         </main>
     </div>
     <script src="js/script.js"></script>

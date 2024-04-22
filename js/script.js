@@ -14,8 +14,8 @@ $(document).ready(function() {
     $(".skip-main").off("click");
 
     // initialize css
-    $('.dropdown-content a').css("color", "#FF8FAB");
-    $('.buttons2 a').css("color", "#FF8FAB");
+    $('.dropdown-content a, .buttons2 a').css("color", "#8b324d");
+    $('.link-button, .home-button, .active').css("color", "#000000")
 
     // skip to main
     $(".skip-main").on("click", function () {
@@ -56,12 +56,10 @@ $(document).ready(function() {
     });
     $('.adopt, .continue, .dropdown-content a').on("mouseenter", function() {
         $(this).animate({fontSize: '+=10px', fontWeight: 'bold'}, 200);
-        $(this).css("color", "black");
-        $(this).css("background-color", "pink");
+        $(this).addClass('dropdown-hover');
     }).on("mouseleave", function() {
         $(this).animate({fontSize: '-=10px', fontWeight: 'normal'}, 200);
-        $(this).css("color", "#FF8FAB");
-        $(this).css("background-color", "transparent");
+        $(this).removeClass('dropdown-hover');
     });
 
     var pets = [];

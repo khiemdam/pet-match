@@ -1,14 +1,26 @@
 $(document).ready(function() {
     console.log("successfully linked js");
+    // reset all event handlers before we reinitialize them
+    $('.dropdown-button').off("click");
+    $('.pet-card').off("swipeleft");
+    $('.pet-card').off("swiperight");
+    $('.no-button').off("click");
+    $('.yes-button').off("click");
+    $('.continue').off("click");
+    $('.logo img, .dropdown-button, .yes-button, .no-button').off("mouseenter");
+    $('.logo img, .dropdown-button, .yes-button, .no-button').off("mouseleave");
+    $('.adopt, .continue, .dropdown-content a').off("mouseenter");
+    $('.adopt, .continue, .dropdown-content a').off("mouseleave");
+    $(".skip-main").off("click");
+
     // initialize css
     $('.dropdown-content a').css("color", "#FF8FAB");
     $('.buttons2 a').css("color", "#FF8FAB");
 
-    // render pages
-    $('.home, .logo').on("click", render_home); // by default, we will render the home page
-    $('.discover').on("click", render_discover);
-    $('.contact').on("click", render_contact);
-    $('.about').on("click", render_about);
+    // skip to main
+    $(".skip-main").on("click", function () {
+        $('#main').attr('tabIndex', -1).focus();
+    });
 
     // dropdown menu
     $('.dropdown-button').on('click', function() {
@@ -16,18 +28,24 @@ $(document).ready(function() {
         $('.dropdown-content').slideToggle("slow");
         console.log("clicked on dropdown button");
     });
+    $('.dropdown-button').on('keypress',function(key) {
+        if(key.which == 13) {
+            $('.dropdown-content').slideToggle("slow");
+            console.log("selected dropdown button");
+        }
+    });
 
     // animate buttons
-    $('.logo img, .dropdown-button, .yes-button, .no-button').hover(function() {
+    $('.logo img, .dropdown-button, .yes-button, .no-button').on("mouseenter", function() {
         $(this).animate({width: '+=20px'});
-    }, function() {
+    }).on("mouseleave", function() {
         $(this).animate({width: '-=20px'});
     });
-    $('.adopt, .continue, .dropdown-content a').hover(function() {
+    $('.adopt, .continue, .dropdown-content a').on("mouseenter", function() {
         $(this).animate({fontSize: '+=10px', fontWeight: 'bold'}, 200);
         $(this).css("color", "black");
         $(this).css("background-color", "pink");
-    }, function() {
+    }).on("mouseleave", function() {
         $(this).animate({fontSize: '-=10px', fontWeight: 'normal'}, 200);
         $(this).css("color", "#FF8FAB");
         $(this).css("background-color", "transparent");
@@ -61,22 +79,6 @@ $(document).ready(function() {
         continue_right_swipe(pets, curr_pet_index);
     });
 })
-
-function render_home() {
-
-}
-
-function render_discover() {
-
-}
-
-function render_about() {
-
-}
-
-function render_contact() {
-
-}
 
 function load_pets(pets_array) {
     pets_array.push(new Object({ name: "Bob Barker", info: "Border Collie & Siberian Husky Mix", age: "Adult Male Medium", file: "bobbarker.jpeg", url: "https://www.petfinder.com/dog/bob-barker-71227564/mi/ann-arbor/humane-society-of-huron-valley-mi175/"}));
